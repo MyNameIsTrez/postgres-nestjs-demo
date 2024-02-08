@@ -1,0 +1,11 @@
+services:
+  nestjs:
+    build: containers/nestjs
+    image: nestjs
+    container_name: nestjs
+    restart: on-failure
+
+  db:
+    image: postgres:alpine
+    container_name: db
+    env_file: .env
