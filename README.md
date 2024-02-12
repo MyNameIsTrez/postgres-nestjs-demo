@@ -19,6 +19,10 @@ And every time you visit the website, you'll get a number that is incremented by
 5. Connect to the container's postgres with `psql -h localhost -U postgres`
 6. Create user with `curl localhost:3000/users -d "{'id':1,'firstName':'Foo','lastName':'Bar',isActive:true}"`
 
+## psql commands
+To view the user table's types, use `\d user`
+To view the contents of the table, use `table public.user`
+
 ## Regenerating containers/nestjs
 
 `cd containers/nestjs`
