@@ -17,7 +17,7 @@ And every time you visit the website, you'll get a number that is incremented by
 3. Connect to the postgres server with `sudo -u postgres psql`
 4. Stop the postgres server with `sudo systemctl stop postgresql`
 5. Connect to the container's postgres with `psql -h localhost -U postgres`
-6. Create user with `curl localhost:3000/users -d "{'id':1,'firstName':'Foo','lastName':'Bar',isActive:true}"`
+6. Create user with `curl localhost:3000/users -H 'Content-Type: application/json' -d '{"id":1,"firstName":"Foo","lastName":"Bar","isActive":true}'`
 
 ## psql commands
 To view the user table's types, use `\d user`
