@@ -17,8 +17,9 @@ services:
     env_file: .env
     # networks:
     #   - transcendence
-    # ports:
-    #   - "5432:5432"
+    # Use to manually inspect the db
+    ports:
+      - "5432:5432"
 
 # networks:
 #   transcendence:
