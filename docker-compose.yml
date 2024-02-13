@@ -3,6 +3,7 @@ services:
     build: containers/nestjs
     image: nestjs
     container_name: nestjs
+    init: true # Prevents "make down" from waiting on 10s timeout
     restart: on-failure
     depends_on:
       - db
