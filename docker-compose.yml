@@ -17,4 +17,7 @@ services:
     ports: # Use to manually inspect the db
       - "5432:5432"
     volumes:
-      - ./data:/var/lib/postgresql/data
+      - db_volume:/var/lib/postgresql/data
+
+volumes:
+  db_volume:
