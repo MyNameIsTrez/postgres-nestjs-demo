@@ -9,4 +9,5 @@ COPY .eslintrc.js .gitignore .prettierrc nest-cli.json tsconfig.build.json tscon
 
 COPY src/ /nestjs/src/
 
-CMD [ "npm", "run", "start:dev", "--prefix=nestjs" ]
+# "exec" fixes relying on the "docker compose down" timeout to kill this container
+CMD [ "exec", "npm", "run", "start:dev", "--prefix=nestjs" ]
