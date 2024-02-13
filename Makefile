@@ -4,7 +4,7 @@
 # TODO: DON'T PUSH THE "-d" AND MAKE SURE IT ISN'T IN THE FINAL VERSION
 .PHONY: up
 up:
-	docker-compose up --build --detach --remove-orphans
+	docker compose up --build --detach --remove-orphans
 
 .PHONY: down
 down:

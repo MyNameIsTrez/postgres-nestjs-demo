@@ -3,25 +3,16 @@ services:
     build: containers/nestjs
     image: nestjs
     container_name: nestjs
-    init: true # Prevents "make down" from waiting on 10s timeout
+    init: true # Prevents from waiting on 10s timeout on shutdown
     restart: on-failure
     depends_on:
       - db
     ports:
       - "3000:3000"
-    # networks:
-    #   - transcendence
 
   db:
     image: postgres:alpine
     container_name: db
     env_file: .env
-    # networks:
-    #   - transcendence
-    # Use to manually inspect the db
-    ports:
+    ports: # Use to manually inspect the db
       - "5432:5432"
-
-# networks:
-#   transcendence:
-#     name: transcendence
