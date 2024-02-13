@@ -10,9 +10,9 @@ import { AppService } from './app.service';
       type: 'postgres',
       host: 'db',
       port: 5432,
-      username: 'postgres',
+      username: 'foo',
       password: 'hunter2',
-      database: 'postgres',
+      database: 'bar',
       autoLoadEntities: true,
       synchronize: true, // TODO: Remove?
       logging: true // TODO: Disable?
