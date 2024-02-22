@@ -10,6 +10,8 @@ And every time you visit the website, you'll get a number that is incremented by
 
 `curl localhost:3000`
 
+You can use `docker compose exec db bash` to go into the database container, and `psql --username=foo --dbname=bar` to view the database, where you can use `\d user` to view the "user" table
+
 ## Running locally
 
 1. Check if postgres is running with `ps aux | grep postgres`
@@ -20,6 +22,7 @@ And every time you visit the website, you'll get a number that is incremented by
 6. Create user with `curl localhost:3000/users -H 'Content-Type: application/json' -d '{"id":1,"firstName":"Foo","lastName":"Bar","isActive":true}'`
 
 ## psql commands
+
 To view the user table's types, use `\d user`
 To view the contents of the table, use `table public.user`
 
