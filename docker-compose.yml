@@ -5,10 +5,12 @@ services:
     container_name: nestjs
     init: true # Prevents waiting on 10s timeout on shutdown
     restart: on-failure
-    depends_on:
-      - db
     ports:
       - "3000:3000"
+    volumes:
+      - ./containers/nestjs/:/nestjs/code/
+    depends_on:
+      - db
 
   db:
     image: postgres:alpine
